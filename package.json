@@ -4,6 +4,7 @@
   "description": "Tools for making pixel-perfect designs with React",
   "author": "Alex Krolick",
   "license": "MIT",
+  "main": "lib/index.js",
   "module": "lib/index.js",
   "source": "src/index.js",
   "files": [
