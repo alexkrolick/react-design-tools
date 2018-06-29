@@ -1,0 +1,32 @@
+[ignore]
+# Duplicate or broken Flow defs
+<PROJECT_ROOT>/node_modules/config-chain/test/broken.json
+<PROJECT_ROOT>/node_modules/css-to-react-native/node_modules/fbjs/
+<PROJECT_ROOT>/node_modules/react-router/node_modules/warning/
+# Built files
+<PROJECT_ROOT>/dist/.*
+<PROJECT_ROOT>/lib/.*
+<PROJECT_ROOT>/.cache/.*
+<PROJECT_ROOT>/coverage/.*
+# <PROJECT_ROOT>/.*(.test.js)
+
+[libs]
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+
+module.file_ext=.js
+module.file_ext=.css
+module.file_ext=.scss
+module.system=haste
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+[strict]
+nonstrict-import
+untyped-import
+unclear-type
+unsafe-getters-setters
+untyped-type-import
