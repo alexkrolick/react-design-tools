@@ -1,4 +1,5 @@
 # react-design-tools
+
 Tools for making pixel-perfect designs with React
 
 ## Demo
@@ -25,7 +26,7 @@ const colors = {
 
 _See [this gist](https://gist.github.com/alexkrolick/652718f1f6ca3f4decab7f9222634c5a) for a way to parse SCSS variables into ES modules._
 
-## DiffTool
+### DiffTool
 
 ```js
 import designImgUrl from "./design.png"
@@ -38,3 +39,7 @@ const h = 250;
   <MyComponent />
 </Difftool>
 ```
+
+## License
+
+[MIT](./LICENSE)
