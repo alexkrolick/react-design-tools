@@ -3,8 +3,12 @@
   "version": "0.0.2",
   "description": "Tools for making pixel-perfect designs with React",
   "author": "Alex Krolick",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkrolick/react-design-tools.git"
+  },
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "module": "lib/index.js",
   "source": "src/index.js",
   "files": [
@@ -12,20 +16,20 @@
     "lib/"
   ],
   "scripts": {
-    "dev": "babel $npm_package_buildSrcDir -d $npm_package_buildOutDir --watch --presets=react-app/dev",
+    "dev": "BABEL_ENV=development babel src -d lib --watch",
     "test": "jest | exit 0",
     "check:lint": "eslint ./src --max-warnings=0 --report-unused-disable-directives",
     "check:flow": "flow check",
     "check": "npm-run-all check:lint check:flow test",
-    "build:lib": "babel $npm_package_buildSrcDir -d $npm_package_buildOutDir --presets=react-app/prod",
+    "build:lib": "BABEL_ENV=es babel src -d lib",
+    "build:dist": "BABEL_ENV=cjs babel src -d dist",
     "build:flow": "flow gen-flow-files ./src --out-dir ./lib",
-    "build": "npm-run-all build:lib",
+    "build": "npm-run-all build:lib build:dist",
     "prepublishOnly": "npm-run-all build",
     "prebuild": "npm-run-all cleanup check",
-    "cleanup": "rimraf ./lib"
+    "cleanup": "rimraf ./lib ./dist"
   },
-  "buildSrcDir": "src",
-  "buildOutDir": "lib",
+  "sideEffects": false,
   "dependencies": {
     "@compositor/kit": "^1.0.47",
     "lodash": "^4.17.10",
@@ -37,6 +41,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.5",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react-app": "^3.1.2",
     "eslint": "^4.1.1",
     "eslint-config-prettier": "^2.9.0",
