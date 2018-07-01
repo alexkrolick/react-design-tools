@@ -27,7 +27,8 @@
           }
         ],
         "react-app/prod"
-      ]
+      ],
+      "plugins": ["transform-flow-comments"]
     },
     "test": {
       "presets": [

@@ -23,7 +23,6 @@
     "check": "npm-run-all check:lint check:flow test",
     "build:lib": "BABEL_ENV=es babel src -d lib",
     "build:dist": "BABEL_ENV=cjs babel src -d dist",
-    "build:flow": "flow gen-flow-files ./src --out-dir ./lib",
     "build": "npm-run-all build:lib build:dist",
     "prepublishOnly": "npm-run-all build",
     "prebuild": "npm-run-all cleanup check",
@@ -41,6 +40,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.5",
+    "babel-plugin-transform-flow-comments": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react-app": "^3.1.2",
     "eslint": "^4.1.1",
