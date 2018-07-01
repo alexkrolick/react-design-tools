@@ -24,7 +24,7 @@ const colors = {
 <PaletteLookup palette={colors} />
 ```
 
-_See [this gist](https://gist.github.com/alexkrolick/652718f1f6ca3f4decab7f9222634c5a) for a way to parse SCSS variables into ES modules._
+_See [this gist](https://gist.github.com/alexkrolick/68894477eba26add2949e68d4ca5e5a9) for a way to parse SCSS variables into ES modules._
 
 ### DiffTool
 
