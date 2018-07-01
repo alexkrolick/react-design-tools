@@ -4,8 +4,7 @@
       "presets": [
         "env",
         "react-app/dev"
-      ],
-      "plugins": ["transform-flow-comments"]
+      ]
     },
     "cjs": {
       "presets": [
@@ -16,8 +15,7 @@
           }
         ],
         "react-app/prod"
-      ],
-      "plugins": ["transform-flow-comments"]
+      ]
     },
     "es": {
       "presets": [
@@ -29,20 +27,18 @@
           }
         ],
         "react-app/prod"
-      ],
-      "plugins": ["transform-flow-comments"]
+      ]
     },
     "test": {
       "presets": [
         [
           "env",
           {
-            "modules": "commonjs",
+            "modules": "commonjs"
           }
         ],
         "react-app/prod"
-      ],
-      "plugins": ["transform-flow-comments"]
+      ]
     }
   }
 }
